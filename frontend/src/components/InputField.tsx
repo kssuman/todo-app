@@ -33,21 +33,23 @@ export const InputField: React.FC<props> = ({ task, setTask, handleAdd, deadline
         </div>
 
         <div className="input__deadline_button">
-          <input
-            type="number"
-            placeholder="Enter a deadline (in Minutes)?"
-            onChange={(e) => setDeadline(Number(e.target.value))}
-            ref={inputRef}
-            value={deadline}
-            min={0}
-            className="input__deadline" />
-            <button type="submit" className="input__submit_button">Add</button>
-        
+          <div className="input__deadline__label">
+            <div>Enter a deadline (in Minutes)</div>
+            <div>
+              <input
+              type="number"
+              placeholder="Enter a deadline (in Minutes)"
+              onChange={(e) => setDeadline(Number(e.target.value))}
+              ref={inputRef}
+              value={deadline}
+              min={0}
+              className="input__deadline" />
+            </div>
+          </div>
+          <button type="submit" className="input__submit_button">Add</button>
         </div>
-        
-        
       </div>
-  </form>
+    </form>
   )
 };
 
