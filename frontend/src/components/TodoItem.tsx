@@ -35,7 +35,7 @@ export const TodoItem: React.FC<props> = ({ todo, todoList, setTodoList }) => {
                     <span className="todo_item_done"><ImCheckboxChecked /></span> : 
                     <span className="todo_item_pending" onClick={() => handleComplete(todo)}><ImCheckboxUnchecked /></span>
                 }
-                <span className="todo_item_text"> {todo.task} </span>
+                {todo.isCompleted ? <s className="todo_item_text"> {todo.task} </s> : <span className="todo_item_text"> {todo.task} </span>}
                 <span className="todo_item_delete" onClick={() => handleDelete(todo.id)}><TiDelete /></span>
             </div>
             <div><hr className="hrline"/></div>
