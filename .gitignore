@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/.pnp
+.pnp.js
+
+/.vs
+*/.vscode
+/frontend/node_modules
+frontend/.vscode/settings.json
+frontend/.vscode/launch.json
+backend/TodoWebApi/bin
+backend/TodoWebApi/obj
+backend/TodoWebApi/.vs
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
